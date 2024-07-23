@@ -77,19 +77,8 @@ func getRepoName(githubURL string) string {
 }
 
 func runNbDefense(dir string) error {
-	return filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		if !info.IsDir() {
-			fmt.Printf("Running nbdefense scan on %s\n", path)
-			cmd := exec.Command("nbdefense", "scan", path)
-			cmd.Stdout = os.Stdout
-			cmd.Stderr = os.Stderr
-			if err := cmd.Run(); err != nil {
-				return fmt.Errorf("nbdefense scan failed on %s: %v", path, err)
-			}
-		}
-		return nil
-	})
+	cmd := exec.Command("nbdefense", "scan", dir)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	return cmd.Run()
 }
