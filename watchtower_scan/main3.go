@@ -64,11 +64,11 @@ func main() {
 
 	err = runWatchtower(destPath)
 	if err != nil {
-		fmt.Printf("Failed to run nbdefense: %v\n", err)
+		fmt.Printf("Failed to run watchtower: %v\n", err)
 		return
 	}
 
-	fmt.Println("nbdefense scan complete!")
+	fmt.Println("watchtower scan complete!")
 }
 
 func getRepoName(githubURL string) string {
@@ -76,10 +76,20 @@ func getRepoName(githubURL string) string {
 	return strings.TrimSuffix(parts[len(parts)-1], ".git")
 }
 
-
-
 func runWatchtower(dir string) error {
-	cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("cd /Users/david/desktop/watchtower/src && python watchtower.py --repo_type=folder --path=%s", dir))
+	// Determine the directory where the program is running
+	programDir, err := os.Executable()
+	if err != nil {
+		return fmt.Errorf("failed to get executable path: %v", err)
+	}
+	programDir = filepath.Dir(programDir)
+
+	// Specify the output file path in the program directory
+	outputFile := filepath.Join(programDir, "watchtower_output.json")
+
+	// Construct the command to run Watchtower
+	cmdStr := fmt.Sprintf("cd /Users/david/desktop/watchtower/src && python watchtower.py --repo_type=folder --path=%s > %s 2>&1", dir, outputFile)
+	cmd := exec.Command("/bin/sh", "-c", cmdStr)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
