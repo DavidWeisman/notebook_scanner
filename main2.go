@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/exec"
 	"os/user"
 	"path/filepath"
 	"strings"
@@ -20,7 +21,6 @@ func main() {
 	githubURL := os.Args[1]
 	pathInRepo := os.Args[2]
 
-	// Get the current user to determine the desktop path
 	usr, err := user.Current()
 	if err != nil {
 		fmt.Printf("Failed to get current user: %v\n", err)
@@ -33,10 +33,8 @@ func main() {
 		return
 	}
 
-	// Parse the repository URL to extract the repo name
 	repoName := getRepoName(githubURL)
 
-	// Create a directory on the desktop with the repo name
 	destDir := filepath.Join(desktopPath, repoName)
 	err = os.Mkdir(destDir, 0755)
 	if err != nil {
@@ -44,7 +42,6 @@ func main() {
 		return
 	}
 
-	// Clone the repository to a temporary directory
 	tempDir := filepath.Join(os.TempDir(), repoName)
 	_, err = git.PlainClone(tempDir, false, &git.CloneOptions{
 		URL: githubURL,
@@ -55,7 +52,6 @@ func main() {
 	}
 	defer os.RemoveAll(tempDir) // Clean up the temporary directory after the program ends
 
-	// Copy the specified folder or file to the new directory on the desktop
 	srcPath := filepath.Join(tempDir, pathInRepo)
 	destPath := filepath.Join(destDir, filepath.Base(pathInRepo))
 	err = copy.Copy(srcPath, destPath)
@@ -65,10 +61,35 @@ func main() {
 	}
 
 	fmt.Println("Download complete! File copied to desktop directory.")
+
+	err = runNbDefense(destPath)
+	if err != nil {
+		fmt.Printf("Failed to run nbdefense: %v\n", err)
+		return
+	}
+
+	fmt.Println("nbdefense scan complete!")
 }
 
-// getRepoName extracts the repository name from a GitHub URL
 func getRepoName(githubURL string) string {
 	parts := strings.Split(githubURL, "/")
 	return strings.TrimSuffix(parts[len(parts)-1], ".git")
+}
+
+func runNbDefense(dir string) error {
+	return filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() {
+			fmt.Printf("Running nbdefense scan on %s\n", path)
+			cmd := exec.Command("nbdefense", "scan", path)
+			cmd.Stdout = os.Stdout
+			cmd.Stderr = os.Stderr
+			if err := cmd.Run(); err != nil {
+				return fmt.Errorf("nbdefense scan failed on %s: %v", path, err)
+			}
+		}
+		return nil
+	})
 }
