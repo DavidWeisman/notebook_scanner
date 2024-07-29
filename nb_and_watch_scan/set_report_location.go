@@ -75,7 +75,7 @@ func moveHTMLFiles(srcDir, destDir string) error {
 		}
 
 		// Check if the file has .html extension
-		if !info.IsDir() && filepath.Ext(info.Name()) == ".html" {
+		if !info.IsDir() && filepath.Ext(info.Name()) == ".json" {
 			// Define the destination path for the HTML file
 			destPath := filepath.Join(destDir, info.Name())
 

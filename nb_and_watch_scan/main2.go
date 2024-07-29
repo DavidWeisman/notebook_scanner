@@ -45,9 +45,11 @@ func main() {
 	tempDir := filepath.Join(os.TempDir(), repoName)
 	_, err = git.PlainClone(tempDir, false, &git.CloneOptions{
 		URL: githubURL,
+		Progress: os.Stdout,
 	})
 	if err != nil {
 		fmt.Printf("Failed to clone the repository: %v\n", err)
+		os.RemoveAll(tempDir)
 		return
 	}
 
@@ -94,7 +96,7 @@ func getRepoName(githubURL string) string {
 }
 
 func runNbDefense(dir string) error {
-	cmd := exec.Command("nbdefense", "scan", dir)
+	cmd := exec.Command("nbdefense", "scan", "-o","json", dir)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
