@@ -19,14 +19,14 @@ func main() {
 	if err1 != nil {
 		fmt.Printf("Failed to move HTML files: %v\n", err1)
 	} else {
-		fmt.Println("Successfully moved HTML files.")
+		fmt.Println("Successfully moved nbdefese report.")
 	}
 
 	err2 := moveDirectories(srcDir2, destDir2)
         if err2 != nil {
                 fmt.Printf("Failed to move directories: %v\n", err2)
         } else {
-                fmt.Println("Successfully moved directories.")
+                fmt.Println("Successfully moved watchtower report.")
         }
 }
 

@@ -7,6 +7,7 @@ import (
     "log"
     "os"
     "bufio"
+    "path/filepath"
 )
 
 type Root struct {
@@ -79,65 +80,75 @@ func readJSON(filename string) (*Root, error) {
 }
 
 func main() {
-    if len(os.Args) != 2 {
-                fmt.Println("Usage: go run main.go <github_url> <path_in_repo>")
-                return
-    }
 
-    pathJsonFile := os.Args[1]
-    
-    jsonData, err := readJSON(pathJsonFile)
+    dirPath := "/Users/david/desktop/notebook_scaner/scand_reports/nbdefense"
+    files, err := ioutil.ReadDir(dirPath)
     if err != nil {
-        log.Fatalf("Error reading JSON file: %v", err)
+        log.Fatalf("Error reading directory: %v", err)
     }
 
-    file, err := os.Create("nbdefense_report.txt")
-    if err != nil {
-        log.Fatalf("Error creating file: %v", err)
-    }
-    defer file.Close()
+    for _, f := range files {
+        if filepath.Ext(f.Name()) == ".json" {
+            filePath := filepath.Join(dirPath, f.Name())
 
-    writer := bufio.NewWriter(file)
-
-    writer.WriteString("\nPlugins:\n")
-    for _, plugin := range jsonData.Plugins {
-        writer.WriteString(fmt.Sprintf("\n  Name: %s\n", plugin.Name))
-        writer.WriteString(fmt.Sprintf("  Enabled: %t\n", plugin.Settings.Enabled))
-        if plugin.Settings.ConfidenceThreshold != 0 {
-            writer.WriteString(fmt.Sprintf("  ConfidenceThreshold: %f\n", plugin.Settings.ConfidenceThreshold))
-        }
-        if plugin.Settings.Entities != nil {
-            writer.WriteString("  Entities:\n")
-            for entity, enabled := range plugin.Settings.Entities {
-                writer.WriteString(fmt.Sprintf("    %s: %t\n", entity, enabled))
+            jsonData, err := readJSON(filePath)
+            if err != nil {
+                log.Printf("Error reading JSON file %s: %v", filePath, err)
+                continue
             }
-        }
-        if plugin.Settings.SecretsPlugins != nil {
-            writer.WriteString("  SecretsPlugins:\n")
-            for _, secretPlugin := range plugin.Settings.SecretsPlugins {
-                writer.WriteString(fmt.Sprintf("    Name: %s\n", secretPlugin.Name))
-                if secretPlugin.KeywordExclude != "" {
-                    writer.WriteString(fmt.Sprintf("    KeywordExclude: %s\n", secretPlugin.KeywordExclude))
+
+            outputFileName := f.Name()[:len(f.Name())-len(filepath.Ext(f.Name()))] + "_report.txt"
+            outputFilePath := filepath.Join(dirPath, outputFileName)
+
+            file, err := os.Create(outputFilePath)
+            if err != nil {
+                log.Fatalf("Error creating file %s: %v", outputFilePath, err)
+            }
+            defer file.Close()
+
+            writer := bufio.NewWriter(file)
+
+            writer.WriteString("\nPlugins:\n")
+            for _, plugin := range jsonData.Plugins {
+                writer.WriteString(fmt.Sprintf("\n  Name: %s\n", plugin.Name))
+                writer.WriteString(fmt.Sprintf("  Enabled: %t\n", plugin.Settings.Enabled))
+                if plugin.Settings.ConfidenceThreshold != 0 {
+                    writer.WriteString(fmt.Sprintf("  ConfidenceThreshold: %f\n", plugin.Settings.ConfidenceThreshold))
+                }
+                if plugin.Settings.Entities != nil {
+                    writer.WriteString("  Entities:\n")
+                    for entity, enabled := range plugin.Settings.Entities {
+                        writer.WriteString(fmt.Sprintf("    %s: %t\n", entity, enabled))
+                    }
+                }
+                if plugin.Settings.SecretsPlugins != nil {
+                    writer.WriteString("  SecretsPlugins:\n")
+                    for _, secretPlugin := range plugin.Settings.SecretsPlugins {
+                        writer.WriteString(fmt.Sprintf("    Name: %s\n", secretPlugin.Name))
+                        if secretPlugin.KeywordExclude != "" {
+                            writer.WriteString(fmt.Sprintf("    KeywordExclude: %s\n", secretPlugin.KeywordExclude))
+                        }
+                    }
                 }
             }
+
+            writer.WriteString("\nNotebooks:\n")
+            for _, notebook := range jsonData.Notebooks {
+                writer.WriteString(fmt.Sprintf("    Name: %s\n", notebook))
+            }
+
+            writer.WriteString("\nNotebook Issues:\n")
+            for _, notebookIssue := range jsonData.NotebookIssues {
+                writer.WriteString(fmt.Sprintf("Notebook Name: %s\n", notebookIssue.Path))
+                for _, issue := range notebookIssue.Issues {
+                    printIssue(writer, issue, "  ")
+                }
+                writer.WriteString("\n\n\n")
+            }
+
+            writer.Flush()
         }
     }
-
-    writer.WriteString("\nNotebooks:\n")
-    for _, notebook := range jsonData.Notebooks {
-        writer.WriteString(fmt.Sprintf("    Name: %s\n", notebook))
-    }    
-
-    writer.WriteString("\nNotebook Issues:\n")
-    for _, notebookIssue := range jsonData.NotebookIssues {
-        writer.WriteString(fmt.Sprintf("Notebook Name: %s\n", notebookIssue.Path))
-        for _, issue := range notebookIssue.Issues {
-            printIssue(writer, issue, "  ")
-        }
-        writer.WriteString("\n\n\n")
-    }
-
-    writer.Flush()
 }
 
 func printIssue(writer *bufio.Writer, issue Issue, indent string) {

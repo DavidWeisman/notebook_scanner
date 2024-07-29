@@ -81,13 +81,27 @@ func main() {
 
         fmt.Println("watchtower scan complete!")
 	
-	goFile := "/Users/david/desktop/notebook_scaner/scanner/set_report_location.go"
+	set_report_loc_file := "/Users/david/desktop/notebook_scaner/scanner/set_report_location.go"
+	make_watchtower_re_file := "/Users/david/desktop/notebook_scaner/comper_reports/make_watchtower_report.go" 
+	make_nbdefense_re_file := "/Users/david/desktop/notebook_scaner/comper_reports/make_nbdefense_report.go"
 	
-	err = runGoFile(goFile)
+	err = runGoFile(set_report_loc_file)
 	if err != nil {
 		fmt.Printf("failed to run first Go file: %v", err)
 		return
 	}
+
+	err = runGoFile(make_watchtower_re_file)
+        if err != nil {
+                fmt.Printf("failed to run first Go file: %v", err)
+                return
+        }
+	
+	err = runGoFile(make_nbdefense_re_file)
+        if err != nil {
+                fmt.Printf("failed to run first Go file: %v", err)
+                return
+        }
 }
 
 func getRepoName(githubURL string) string {

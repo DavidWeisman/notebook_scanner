@@ -112,7 +112,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-07-29T07:52:19Z"
+                            "generated_at": "2024-07-29T11:59:13Z"
                      }
               },
               {
@@ -144,7 +144,7 @@
                                    "account": "",
                                    "local_database_path": null,
                                    "safety_version": "3.0.1",
-                                   "timestamp": "2024-07-29 10:52:27",
+                                   "timestamp": "2024-07-29 14:59:20",
                                    "packages_found": 5,
                                    "vulnerabilities_found": 51,
                                    "vulnerabilities_ignored": 0,
@@ -3144,7 +3144,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-07-29T07:52:29Z"
+                            "generated_at": "2024-07-29T11:59:22Z"
                      }
               },
               {
@@ -3273,7 +3273,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-07-29T07:52:35Z"
+                            "generated_at": "2024-07-29T11:59:26Z"
                      }
               },
               {

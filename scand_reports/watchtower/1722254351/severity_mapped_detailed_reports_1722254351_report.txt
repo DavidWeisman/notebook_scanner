@@ -1,0 +1,190 @@
+Notebook Name: /Users/david/Desktop/notebook_scanner/test_notebooks/text_classification_quantization_ort.ipynb
+
+  Tool: Detect-Secret
+  Version: 1.4.0
+  Plugins Used:
+      Name: ArtifactoryDetector
+      Name: AWSKeyDetector
+      Name: AzureStorageKeyDetector
+      Name: Base64HighEntropyString
+      Name: BasicAuthDetector
+      Name: CloudantDetector
+      Name: DiscordBotTokenDetector
+      Name: GitHubTokenDetector
+      Name: HexHighEntropyString
+      Name: IbmCloudIamDetector
+      Name: IbmCosHmacDetector
+      Name: JwtTokenDetector
+      Name: KeywordDetector
+      Name: MailchimpDetector
+      Name: NpmDetector
+      Name: PrivateKeyDetector
+      Name: SendGridDetector
+      Name: SlackDetector
+      Name: SoftlayerDetector
+      Name: SquareOAuthDetector
+      Name: StripeDetector
+      Name: TwilioKeyDetector
+
+  Filters Used:
+      Path: detect_secrets.filters.allowlist.is_line_allowlisted
+      Path: detect_secrets.filters.common.is_ignored_due_to_verification_policies
+      Min Level: 2
+      Path: detect_secrets.filters.heuristic.is_indirect_reference
+      Path: detect_secrets.filters.heuristic.is_likely_id_string
+      Path: detect_secrets.filters.heuristic.is_lock_file
+      Path: detect_secrets.filters.heuristic.is_not_alphanumeric_string
+      Path: detect_secrets.filters.heuristic.is_potential_uuid
+      Path: detect_secrets.filters.heuristic.is_prefixed_with_dollar_sign
+      Path: detect_secrets.filters.heuristic.is_sequential_string
+      Path: detect_secrets.filters.heuristic.is_swagger_file
+      Path: detect_secrets.filters.heuristic.is_templated_secret
+  Results: {}
+
+
+  Tool: Whisper
+  Output Log: []
+
+
+  Tool: Presidio-Analyzer
+  Output Log: 
+
+Type: PERSON, Line: 106, Content: '"qqp": ("question1", "question2"),', Start: 5755, End: 5764, Score: 0.85, vulnerability_severity: Medium
+Type: LOCATION, Line: 178, Content: 'per_channel = False', Start: 8944, End: 8955, Score: 0.85, vulnerability_severity: Medium
+Type: LOCATION, Line: 189, Content: 'per_channel=per_channel,', Start: 9493, End: 9504, Score: 0.85, vulnerability_severity: Medium
+Type: LOCATION, Line: 189, Content: 'per_channel=per_channel,', Start: 9505, End: 9516, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 240, Content: '# Exclude the Add nodes followed by the Softmax operator', Start: 11775, End: 11782, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 241, Content: 'quantization_preprocessor.register_pass(ExcludeNodeFollowedBy("Add", "Softmax"))', Start: 11866, End: 11873, Score: 0.85, vulnerability_severity: Medium
+
+
+  Tool: Safety
+  Output Log: 
+
+
+
+
+Notebook Name: /Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook.ipynb
+
+  Tool: Detect-Secret
+  Version: 1.4.0
+  Plugins Used:
+      Name: ArtifactoryDetector
+      Name: AWSKeyDetector
+      Name: AzureStorageKeyDetector
+      Name: Base64HighEntropyString
+      Name: BasicAuthDetector
+      Name: CloudantDetector
+      Name: DiscordBotTokenDetector
+      Name: GitHubTokenDetector
+      Name: HexHighEntropyString
+      Name: IbmCloudIamDetector
+      Name: IbmCosHmacDetector
+      Name: JwtTokenDetector
+      Name: KeywordDetector
+      Name: MailchimpDetector
+      Name: NpmDetector
+      Name: PrivateKeyDetector
+      Name: SendGridDetector
+      Name: SlackDetector
+      Name: SoftlayerDetector
+      Name: SquareOAuthDetector
+      Name: StripeDetector
+      Name: TwilioKeyDetector
+
+  Filters Used:
+      Path: detect_secrets.filters.allowlist.is_line_allowlisted
+      Path: detect_secrets.filters.common.is_ignored_due_to_verification_policies
+      Min Level: 2
+      Path: detect_secrets.filters.heuristic.is_indirect_reference
+      Path: detect_secrets.filters.heuristic.is_likely_id_string
+      Path: detect_secrets.filters.heuristic.is_lock_file
+      Path: detect_secrets.filters.heuristic.is_not_alphanumeric_string
+      Path: detect_secrets.filters.heuristic.is_potential_uuid
+      Path: detect_secrets.filters.heuristic.is_prefixed_with_dollar_sign
+      Path: detect_secrets.filters.heuristic.is_sequential_string
+      Path: detect_secrets.filters.heuristic.is_swagger_file
+      Path: detect_secrets.filters.heuristic.is_templated_secret
+  Results: {}
+
+
+  Tool: Whisper
+  Output Log: []
+
+
+  Tool: Presidio-Analyzer
+  Output Log: 
+
+Type: EMAIL_ADDRESS, Line: 39, Content: 'email = "john.doe@example.com"', Start: 778, End: 798, Score: 1.0, vulnerability_severity: Medium
+Type: PHONE_NUMBER, Line: 40, Content: 'phone = "123-456-7890"', Start: 809, End: 821, Score: 0.75, vulnerability_severity: Medium
+
+
+  Tool: Safety
+
+Notebook Name: /Users/david/Desktop/notebook_scanner/test_notebooks/tpu_training-tf.ipynb
+
+  Tool: Detect-Secret
+  Version: 1.4.0
+  Plugins Used:
+      Name: ArtifactoryDetector
+      Name: AWSKeyDetector
+      Name: AzureStorageKeyDetector
+      Name: Base64HighEntropyString
+      Name: BasicAuthDetector
+      Name: CloudantDetector
+      Name: DiscordBotTokenDetector
+      Name: GitHubTokenDetector
+      Name: HexHighEntropyString
+      Name: IbmCloudIamDetector
+      Name: IbmCosHmacDetector
+      Name: JwtTokenDetector
+      Name: KeywordDetector
+      Name: MailchimpDetector
+      Name: NpmDetector
+      Name: PrivateKeyDetector
+      Name: SendGridDetector
+      Name: SlackDetector
+      Name: SoftlayerDetector
+      Name: SquareOAuthDetector
+      Name: StripeDetector
+      Name: TwilioKeyDetector
+
+  Filters Used:
+      Path: detect_secrets.filters.allowlist.is_line_allowlisted
+      Path: detect_secrets.filters.common.is_ignored_due_to_verification_policies
+      Min Level: 2
+      Path: detect_secrets.filters.heuristic.is_indirect_reference
+      Path: detect_secrets.filters.heuristic.is_likely_id_string
+      Path: detect_secrets.filters.heuristic.is_lock_file
+      Path: detect_secrets.filters.heuristic.is_not_alphanumeric_string
+      Path: detect_secrets.filters.heuristic.is_potential_uuid
+      Path: detect_secrets.filters.heuristic.is_prefixed_with_dollar_sign
+      Path: detect_secrets.filters.heuristic.is_sequential_string
+      Path: detect_secrets.filters.heuristic.is_swagger_file
+      Path: detect_secrets.filters.heuristic.is_templated_secret
+  Results: {}
+
+
+  Tool: Whisper
+  Output Log: []
+
+
+  Tool: Presidio-Analyzer
+  Output Log: 
+
+Type: PERSON, Line: 239, Content: '"input_ids": tf.io.FixedLenFeature((128,), dtype=tf.int64),', Start: 10883, End: 10903, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 239, Content: '"input_ids": tf.io.FixedLenFeature((128,), dtype=tf.int64),', Start: 10913, End: 10921, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 240, Content: '"attention_mask": tf.io.FixedLenFeature((128,), dtype=tf.int64),', Start: 10956, End: 10976, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 240, Content: '"attention_mask": tf.io.FixedLenFeature((128,), dtype=tf.int64),', Start: 10986, End: 10994, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 241, Content: '"labels": tf.io.FixedLenFeature((1,), dtype=tf.int64),', Start: 11049, End: 11057, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 246, Content: 'tf_dataset = tf.data.TFRecordDataset(["gs://matt-tf-tpu-tutorial-datasets/cola/dataset.tfrecords"])', Start: 11179, End: 11213, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 247, Content: 'tf_dataset = tf_dataset.map(decode_fn)', Start: 11271, End: 11295, Score: 0.85, vulnerability_severity: Medium
+Type: LOCATION, Line: 365, Content: 'image_size = (processor.size["height"], processor.size["width"])', Start: 16188, End: 16209, Score: 0.85, vulnerability_severity: Medium
+Type: PERSON, Line: 388, Content: 'tf_dataset = tf_dataset.map(decode_fn)', Start: 16838, End: 16862, Score: 0.85, vulnerability_severity: Medium
+
+
+  Tool: Safety
+  Output Log: 
+
+
+
+
