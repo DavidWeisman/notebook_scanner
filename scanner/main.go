@@ -53,7 +53,7 @@ func main() {
 		return
 	}
 
-	defer os.RemoveAll(tempDir) // Clean up the temporary directory after the program ends
+	defer os.RemoveAll(tempDir)
 
 	srcPath := filepath.Join(tempDir, pathInRepo)
 	destPath := filepath.Join(destDir, filepath.Base(pathInRepo))
@@ -81,7 +81,7 @@ func main() {
 
         fmt.Println("watchtower scan complete!")
 	
-	goFile := "/Users/david/desktop/notebook_scaner/nb_and_watch_scan/set_report_location.go"
+	goFile := "/Users/david/desktop/notebook_scaner/scanner/set_report_location.go"
 	
 	err = runGoFile(goFile)
 	if err != nil {

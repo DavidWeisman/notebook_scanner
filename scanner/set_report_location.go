@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	// Example usage
-	srcDir1 := "/Users/david/desktop/notebook_scaner/nb_and_watch_scan"
+	
+	srcDir1 := "/Users/david/desktop/notebook_scaner/scanner"
 	destDir1 := "/Users/david/desktop/notebook_scaner/scand_reports/nbdefense"
 
 	srcDir2 := "/Users/david/Desktop/watchtower/src/scanned_reports"
@@ -31,13 +31,11 @@ func main() {
 }
 
 func moveDirectories(srcDir, destDir string) error {
-        // Ensure the destination directory exists
         err := os.MkdirAll(destDir, 0755)
         if err != nil {
                 return fmt.Errorf("failed to create destination directory: %v", err)
         }
 
-        // Read the source directory
         entries, err := os.ReadDir(srcDir)
         if err != nil {
                 return fmt.Errorf("failed to read source directory: %v", err)
@@ -48,7 +46,6 @@ func moveDirectories(srcDir, destDir string) error {
                         srcPath := filepath.Join(srcDir, entry.Name())
                         destPath := filepath.Join(destDir, entry.Name())
 
-                        // Move the directory to the destination directory
                         err := os.Rename(srcPath, destPath)
                         if err != nil {
                                 return fmt.Errorf("failed to move directory %s: %v", srcPath, err)
@@ -60,7 +57,6 @@ func moveDirectories(srcDir, destDir string) error {
 }
 
 
-// moveHTMLFiles moves HTML files from srcDir to destDir
 func moveHTMLFiles(srcDir, destDir string) error {
 	// Ensure the destination directory exists
 	err := os.MkdirAll(destDir, 0755)
@@ -68,24 +64,19 @@ func moveHTMLFiles(srcDir, destDir string) error {
 		return fmt.Errorf("failed to create destination directory: %v", err)
 	}
 
-	// Walk the source directory to find HTML files
 	err = filepath.Walk(srcDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
 
-		// Check if the file has .html extension
 		if !info.IsDir() && filepath.Ext(info.Name()) == ".json" {
-			// Define the destination path for the HTML file
 			destPath := filepath.Join(destDir, info.Name())
 
-			// Move the file to the destination directory
 			err := moveFile(path, destPath)
 			if err != nil {
 				return fmt.Errorf("failed to move file %s: %v", path, err)
 			}
 
-			// Remove the original file
 			err = os.Remove(path)
 			if err != nil {
 				return fmt.Errorf("failed to remove original file %s: %v", path, err)
@@ -100,7 +91,6 @@ func moveHTMLFiles(srcDir, destDir string) error {
 	return nil
 }
 
-// moveFile copies a file from src to dst
 func moveFile(src, dst string) error {
 	sourceFile, err := os.Open(src)
 	if err != nil {

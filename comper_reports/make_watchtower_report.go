@@ -9,7 +9,6 @@ import (
     "os"
 )
 
-// Define structs based on the JSON structure
 type OutputLog struct {
     Version     string    `json:"version"`
     PluginsUsed []Plugin  `json:"plugins_used"`
@@ -34,7 +33,6 @@ type Tool struct {
 type NotebookIssues map[string][]Tool
 
 
-// Function to read JSON file and unmarshal into the struct
 func readJSON(filename string) (*NotebookIssues, error) {
     data, err := ioutil.ReadFile(filename)
     if err != nil {
@@ -51,23 +49,19 @@ func readJSON(filename string) (*NotebookIssues, error) {
 }
 
 func main() {
-    // Read the JSON file
     jsonData, err := readJSON("severity_mapped_detailed_reports_1722173437.json")
     if err != nil {
         log.Fatalf("Error reading JSON file: %v", err)
     }
 
-    // Create a file to write the output
     file, err := os.Create("watchtower_report.txt")
     if err != nil {
         log.Fatalf("Error creating file: %v", err)
     }
     defer file.Close()
 
-    // Create a buffered writer
     writer := bufio.NewWriter(file)
 
-    // Write the output to the file
     for notebookPath, tools := range *jsonData {
         writer.WriteString(fmt.Sprintf("Notebook Name: %s\n", notebookPath))
         for _, tool := range tools {
@@ -117,7 +111,6 @@ func main() {
         writer.WriteString("\n")
     }
 
-    // Flush the buffered writer to ensure all data is written to the file
     writer.Flush()
 
     fmt.Println("Output written to output.txt")

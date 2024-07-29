@@ -9,7 +9,6 @@ import (
     "bufio"
 )
 
-// Define structs based on the JSON structure
 type Root struct {
     Root           string          `json:"root"`
     RootIssues     []interface{}   `json:"root_issues"`
@@ -64,7 +63,6 @@ type Details struct {
     SummaryField  map[string]int        `json:"summary_field"`
 }
 
-// Function to read JSON file and unmarshal into the struct
 func readJSON(filename string) (*Root, error) {
     data, err := ioutil.ReadFile(filename)
     if err != nil {
@@ -81,20 +79,17 @@ func readJSON(filename string) (*Root, error) {
 }
 
 func main() {
-    // Read the JSON file
     jsonData, err := readJSON("nbdefense0728-1530.json")
     if err != nil {
         log.Fatalf("Error reading JSON file: %v", err)
     }
 
-    // Create a file to write the output
     file, err := os.Create("nbdefense_report.txt")
     if err != nil {
         log.Fatalf("Error creating file: %v", err)
     }
     defer file.Close()
 
-    // Create a buffered writer
     writer := bufio.NewWriter(file)
 
     writer.WriteString("\nPlugins:\n")
@@ -135,7 +130,6 @@ func main() {
         writer.WriteString("\n\n\n")
     }
 
-    // Flush the buffered writer to ensure all data is written to the file
     writer.Flush()
 }
 
