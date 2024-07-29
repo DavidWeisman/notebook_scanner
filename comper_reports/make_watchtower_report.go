@@ -49,7 +49,15 @@ func readJSON(filename string) (*NotebookIssues, error) {
 }
 
 func main() {
-    jsonData, err := readJSON("severity_mapped_detailed_reports_1722173437.json")
+   if len(os.Args) != 2 {
+                fmt.Println("Usage: go run main.go <github_url> <path_in_repo>")
+                return
+    }
+
+    pathJsonFile := os.Args[1]
+
+
+    jsonData, err := readJSON(pathJsonFile)
     if err != nil {
         log.Fatalf("Error reading JSON file: %v", err)
     }
@@ -70,10 +78,6 @@ func main() {
             case "Detect-Secret":
                 var outputLog OutputLog
                 err = json.Unmarshal(tool.OutputLog, &outputLog)
-                if err != nil {
-                    log.Printf("Error unmarshalling OutputLog: %v", err)
-                    continue
-                }
                 writer.WriteString(fmt.Sprintf("  Version: %s\n", outputLog.Version))
                 writer.WriteString("  Plugins Used:\n")
                 for _, plugin := range outputLog.PluginsUsed {
@@ -90,18 +94,10 @@ func main() {
             case "Whisper":
                 var outputLog []interface{}
                 err = json.Unmarshal(tool.OutputLog, &outputLog)
-                if err != nil {
-                    log.Printf("Error unmarshalling OutputLog: %v", err)
-                    continue
-                }
                 writer.WriteString(fmt.Sprintf("  Output Log: %v\n", outputLog))
             case "Presidio-Analyzer", "Safety":
                 var outputLog string
                 err = json.Unmarshal(tool.OutputLog, &outputLog)
-                if err != nil {
-                    log.Printf("Error unmarshalling OutputLog: %v", err)
-                    continue
-                }
                 writer.WriteString(fmt.Sprintf("  Output Log: \n\n%s\n", outputLog))
             default:
                 writer.WriteString(fmt.Sprintf("  Output Log: \n\n%s\n", string(tool.OutputLog)))
@@ -113,5 +109,5 @@ func main() {
 
     writer.Flush()
 
-    fmt.Println("Output written to output.txt")
+    fmt.Println("Output written to watchtower_report.txt")
 }

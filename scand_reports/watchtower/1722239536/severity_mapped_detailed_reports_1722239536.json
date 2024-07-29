@@ -1,5 +1,5 @@
 {
-       "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook.ipynb": [
+       "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook.ipynb": [
               {
                      "tool": "Detect-Secret",
                      "output_log": {
@@ -112,7 +112,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-07-29T06:21:51Z"
+                            "generated_at": "2024-07-29T07:52:19Z"
                      }
               },
               {
@@ -129,10 +129,10 @@
                             "report_meta": {
                                    "scan_target": "files",
                                    "scanned": [
-                                          "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                          "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                    ],
                                    "scanned_full_path": [
-                                          "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                          "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                    ],
                                    "target_languages": [
                                           "python"
@@ -144,7 +144,7 @@
                                    "account": "",
                                    "local_database_path": null,
                                    "safety_version": "3.0.1",
-                                   "timestamp": "2024-07-29 09:21:57",
+                                   "timestamp": "2024-07-29 10:52:27",
                                    "packages_found": 5,
                                    "vulnerabilities_found": 51,
                                    "vulnerabilities_ignored": 0,
@@ -191,7 +191,7 @@
                                                         "name": "django",
                                                         "specifier": "==1.11.15",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ]
                                    },
@@ -206,7 +206,7 @@
                                                         "name": "flask",
                                                         "specifier": "==0.12.2",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ]
                                    },
@@ -221,7 +221,7 @@
                                                         "name": "numpy",
                                                         "specifier": "==1.16.0",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ]
                                    },
@@ -236,7 +236,7 @@
                                                         "name": "requests",
                                                         "specifier": "==2.19.1",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ]
                                    },
@@ -251,7 +251,7 @@
                                                         "name": "scikit-learn",
                                                         "specifier": "==0.19.0",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ]
                                    },
@@ -269,7 +269,7 @@
                                                         "name": "scikit-learn",
                                                         "specifier": "==0.19.0",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ],
                                           "found": null,
@@ -355,7 +355,7 @@
                                                         "name": "requests",
                                                         "specifier": "==2.19.1",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ],
                                           "found": null,
@@ -532,7 +532,7 @@
                                                         "name": "numpy",
                                                         "specifier": "==1.16.0",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ],
                                           "found": null,
@@ -686,7 +686,7 @@
                                                         "name": "flask",
                                                         "specifier": "==0.12.2",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ],
                                           "found": null,
@@ -769,7 +769,7 @@
                                                         "name": "django",
                                                         "specifier": "==1.11.15",
                                                         "url": null,
-                                                        "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                        "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                  }
                                           ],
                                           "found": null,
@@ -1169,7 +1169,7 @@
                                                  "name": "scikit-learn",
                                                  "specifier": "==0.19.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Scikit-learn 0.24.2 includes a fix for a ReDoS vulnerability.\r\nhttps://github.com/scikit-learn/scikit-learn/issues/19522",
                                           "is_transitive": false,
@@ -1202,7 +1202,7 @@
                                                  "name": "scikit-learn",
                                                  "specifier": "==0.19.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Scikit-learn 1.1.0rc1 includes a fix for CVE-2020-28975: svm_predict_values in svm.cpp in Libsvm v324, as used in scikit-learn and other products, allows attackers to cause a denial of service (segmentation fault) via a crafted model SVM (introduced via pickle, json, or any other model permanence standard) with a large value in the _n_support array. \r\nNOTE: the scikit-learn vendor's position is that the behavior can only occur if the library's API is violated by an application that changes a private attribute.",
                                           "is_transitive": true,
@@ -1235,7 +1235,7 @@
                                                  "name": "scikit-learn",
                                                  "specifier": "==0.19.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "A sensitive data leakage vulnerability was identified in scikit-learn's TfidfVectorizer affected versions. The vulnerability arises from the unexpected storage of all tokens present in the training data within the `stop_words_` attribute, rather than only storing the subset of tokens required for the TF-IDF technique to function. This behavior leads to the potential leakage of sensitive information, as the `stop_words_` attribute could contain tokens that were meant to be discarded and not stored, such as passwords or keys. The impact of this vulnerability varies based on the nature of the data being processed by the vectorizer.",
                                           "is_transitive": false,
@@ -1268,7 +1268,7 @@
                                                  "name": "requests",
                                                  "specifier": "==2.19.1",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Requests 2.31.0 includes a fix for CVE-2023-32681: Since Requests 2.3.0, Requests has been leaking Proxy-Authorization headers to destination servers when redirected to an HTTPS endpoint. This is a product of how we use 'rebuild_proxies' to reattach the 'Proxy-Authorization' header to requests. For HTTP connections sent through the tunnel, the proxy will identify the header in the request itself and remove it prior to forwarding to the destination server. However when sent over HTTPS, the 'Proxy-Authorization' header must be sent in the CONNECT request as the proxy has no visibility into the tunneled request. This results in Requests forwarding proxy credentials to the destination server unintentionally, allowing a malicious actor to potentially exfiltrate sensitive information.",
                                           "is_transitive": false,
@@ -1301,7 +1301,7 @@
                                                  "name": "requests",
                                                  "specifier": "==2.19.1",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Affected versions of Requests, when making requests through a Requests `Session`, if the first request is made with `verify=False` to disable cert verification, all subsequent requests to the same host will continue to ignore cert verification regardless of changes to the value of `verify`. This behavior will continue for the lifecycle of the connection in the connection pool. Requests 2.32.0 fixes the issue, but versions 2.32.0 and 2.32.1 were yanked due to conflicts with CVE-2024-35195 mitigation.",
                                           "is_transitive": false,
@@ -1334,7 +1334,7 @@
                                                  "name": "requests",
                                                  "specifier": "==2.19.1",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Requests before 2.20.0 sends an HTTP Authorization header to an http URI upon receiving a same-hostname https-to-http redirect, which makes it easier for remote attackers to discover credentials by sniffing the network.",
                                           "is_transitive": false,
@@ -1367,7 +1367,7 @@
                                                  "name": "numpy",
                                                  "specifier": "==1.16.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Numpy 1.22.0 includes a fix for CVE-2021-34141: An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers to trigger slightly incorrect copying by constructing specific string objects. \r\nNOTE: the vendor states that this reported code behavior is \"completely harmless.\"\r\nhttps://github.com/numpy/numpy/issues/18993",
                                           "is_transitive": false,
@@ -1400,7 +1400,7 @@
                                                  "name": "numpy",
                                                  "specifier": "==1.16.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Numpy 1.22.0 includes a fix for CVE-2021-41496: Buffer overflow in the array_from_pyobj function of fortranobject.c, which allows attackers to conduct a Denial of Service attacks by carefully constructing an array with negative values. \r\nNOTE: The vendor does not agree this is a vulnerability; the negative dimensions can only be created by an already privileged user (or internally).\r\nhttps://github.com/numpy/numpy/issues/19000",
                                           "is_transitive": false,
@@ -1433,7 +1433,7 @@
                                                  "name": "numpy",
                                                  "specifier": "==1.16.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Numpy 1.16.3 includes a fix for CVE-2019-6446: It uses the pickle Python module unsafely, which allows remote attackers to execute arbitrary code via a crafted serialized object, as demonstrated by a numpy.load call.\r\nNOTE: Third parties dispute this issue because it is  a behavior that might have legitimate applications in (for example) loading serialized Python object arrays from trusted and authenticated  sources.\r\nhttps://github.com/numpy/numpy/commit/89b688732b37616c9d26623f81aaee1703c30ffb",
                                           "is_transitive": false,
@@ -1466,7 +1466,7 @@
                                                  "name": "numpy",
                                                  "specifier": "==1.16.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Numpy 1.21.0rc1 includes a fix for CVE-2021-33430: A Buffer Overflow vulnerability in the PyArray_NewFromDescr_int function of ctors.c when specifying arrays of large dimensions (over 32) from Python code, which could let a malicious user cause a Denial of Service. \r\nNOTE: The vendor does not agree this is a vulnerability. In (very limited) circumstances a user may be able provoke the buffer overflow, the user is most likely already privileged to at least provoke denial of service by exhausting memory. Triggering this further requires the use of uncommon API (complicated structured dtypes), which is very unlikely to be available to an unprivileged user.\r\nhttps://github.com/numpy/numpy/issues/18939",
                                           "is_transitive": false,
@@ -1499,7 +1499,7 @@
                                                  "name": "numpy",
                                                  "specifier": "==1.16.0",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Numpy 1.22.2  includes a fix for CVE-2021-41495: Null Pointer Dereference vulnerability exists in numpy.sort in NumPy in the PyArray_DescrNew function due to missing return-value validation, which allows attackers to conduct DoS attacks by repetitively creating sort arrays. \r\nNOTE: While correct that validation is missing, an error can only occur due to an exhaustion of memory. If the user can exhaust memory, they are already privileged. Further, it should be practically impossible to construct an attack which can target the memory exhaustion to occur at exactly this place.\r\nhttps://github.com/numpy/numpy/issues/19038",
                                           "is_transitive": false,
@@ -1533,7 +1533,7 @@
                                                  "name": "flask",
                                                  "specifier": "==0.12.2",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Flask 2.2.5 and 2.3.2 include a fix for CVE-2023-30861: When all of the following conditions are met, a response containing data intended for one client may be cached and subsequently sent by the proxy to other clients. If the proxy also caches 'Set-Cookie' headers, it may send one client's 'session' cookie to other clients. The severity depends on the application's use of the session and the proxy's behavior regarding cookies. The risk depends on all these conditions being met:\r\n1. The application must be hosted behind a caching proxy that does not strip cookies or ignore responses with cookies.\r\n2. The application sets 'session.permanent = True'\r\n3. The application does not access or modify the session at any point during a request.\r\n4. 'SESSION_REFRESH_EACH_REQUEST' enabled (the default).\r\n5. The application does not set a 'Cache-Control' header to indicate that a page is private or should not be cached.\r\nThis happens because vulnerable versions of Flask only set the 'Vary: Cookie' header when the session is accessed or modified, not when it is refreshed (re-sent to update the expiration) without being accessed or modified.\r\nhttps://github.com/pallets/flask/security/advisories/GHSA-m2qf-hxjv-5gpq",
                                           "is_transitive": false,
@@ -1566,7 +1566,7 @@
                                                  "name": "flask",
                                                  "specifier": "==0.12.2",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "flask version Before 0.12.3 contains a CWE-20: Improper Input Validation vulnerability in flask that can result in Large amount of memory usage possibly leading to denial of service. This attack appear to be exploitable via Attacker provides JSON data in incorrect encoding. This vulnerability appears to have been fixed in 0.12.3.",
                                           "is_transitive": false,
@@ -1599,7 +1599,7 @@
                                                  "name": "flask",
                                                  "specifier": "==0.12.2",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Flask 0.12.3 includes a fix for CVE-2019-1010083: Unexpected memory usage. The impact is denial of service. The attack vector is crafted encoded JSON data. NOTE: this may overlap CVE-2018-1000656.\r\nhttps://github.com/pallets/flask/pull/2695/commits/0e1e9a04aaf29ab78f721cfc79ac2a691f6e3929",
                                           "is_transitive": false,
@@ -1634,7 +1634,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 4.2.1, 4.1.9 and 3.2.19 include a fix for CVE-2023-31047: In Django 3.2 before 3.2.19, 4.x before 4.1.9, and 4.2 before 4.2.1, it was possible to bypass validation when using one form field to upload multiple files. This multiple upload has never been supported by forms.FileField or forms.ImageField (only the last uploaded file was validated). However, Django's \"Uploading multiple files\" documentation suggested otherwise.\r\nhttps://www.djangoproject.com/weblog/2023/may/03/security-releases",
                                           "is_transitive": false,
@@ -1669,7 +1669,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.27, 2.2.9 and 3.0.1 include a fix for CVE-2019-19844: Account takeover. A suitably crafted email address (that is equal to an existing user's email address after case transformation of Unicode characters) would allow an attacker to be sent a password reset token for the matched user account. One mitigation in the new releases is to send password reset tokens only to the registered user email address.",
                                           "is_transitive": false,
@@ -1703,7 +1703,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django versions 2.1.9 and 2.2.2 include a patched bundled jQuery version to avoid a Prototype Pollution vulnerability.",
                                           "is_transitive": true,
@@ -1738,7 +1738,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.21, 2.1.9 and 2.2.2 include a fix for CVE-2019-12308: The clickable Current URL value displayed by the AdminURLFieldWidget displays the provided value without validating it as a safe URL. Thus, a non validated value stored in the database, or a value provided as a URL query parameter payload, could result in an clickable JavaScript link.",
                                           "is_transitive": false,
@@ -1773,7 +1773,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 4.1.7, 4.0.10 and 3.2.18 include a fix for CVE-2023-24580: Potential denial-of-service vulnerability in file uploads.\r\nhttps://www.djangoproject.com/weblog/2023/feb/14/security-releases",
                                           "is_transitive": false,
@@ -1808,7 +1808,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "The {% debug %} template tag in Django 2.2 before 2.2.27, 3.2 before 3.2.12, and 4.0 before 4.0.2 does not properly encode the current context. This may lead to XSS.",
                                           "is_transitive": false,
@@ -1843,7 +1843,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.27, 3.2.12 and 4.0.2 include a fix for CVE-2022-23833: Denial-of-service possibility in file uploads.\r\nhttps://www.djangoproject.com/weblog/2022/feb/01/security-releases",
                                           "is_transitive": false,
@@ -1877,7 +1877,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 3.2.14 and 4.0.6 include a fix for CVE-2022-34265: Potential SQL injection via Trunc(kind) and Extract(lookup_name) arguments.\r\nhttps://www.djangoproject.com/weblog/2022/jul/04/security-releases",
                                           "is_transitive": false,
@@ -1912,7 +1912,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django versions 2.2.25, 3.1.14 and 3.2.10 include a fix for CVE-2021-44420: In Django 2.2 before 2.2.25, 3.1 before 3.1.14, and 3.2 before 3.2.10, HTTP requests for URLs with trailing newlines could bypass upstream access control based on URL paths.\r\nhttps://www.djangoproject.com/weblog/2021/dec/07/security-releases/",
                                           "is_transitive": false,
@@ -1947,7 +1947,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.23, 2.1.11 and 2.2.4 include a fix for CVE-2019-14232: If django.utils.text.Truncator's chars() and words() methods were passed the html=True argument, they were extremely slow to evaluate certain inputs due to a catastrophic backtracking vulnerability in a regular expression. The chars() and words() methods are used to implement the truncatechars_html and truncatewords_html template filters, which were thus vulnerable.",
                                           "is_transitive": false,
@@ -1982,7 +1982,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "In Django 3.2 before 3.2.16, 4.0 before 4.0.8, and 4.1 before 4.1.2, internationalized URLs were subject to a potential denial of service attack via the locale parameter, which is treated as a regular expression.",
                                           "is_transitive": false,
@@ -2017,7 +2017,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Affected versions of Django are vulnerable to potential regular expression denial-of-service (REDoS). django.utils.text.Truncator.words() method (with html=True) and truncatewords_html template filter were subject to a potential regular expression denial-of-service attack using a suitably crafted string (follow up to CVE-2019-14232 and CVE-2023-43665).",
                                           "is_transitive": false,
@@ -2052,7 +2052,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.23, 2.1.11 and 2.2.4 include a fix for CVE-2019-14234: Due to an error in shallow key transformation, key and index lookups for django.contrib.postgres.fields.JSONField, and key lookups for django.contrib.postgres.fields.HStoreField, were subject to SQL injection. This could, for example, be exploited via crafted use of \"OR 1=1\" in a key or index name to return all records, using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed to the QuerySet.filter() function.",
                                           "is_transitive": false,
@@ -2087,7 +2087,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.23, 2.1.11, and 2.2.4 include a fix for CVE-2019-14233: Due to the behavior of the underlying HTMLParser, django.utils.html.strip_tags would be extremely slow to evaluate certain inputs containing large sequences of nested incomplete HTML entities.",
                                           "is_transitive": false,
@@ -2122,7 +2122,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.23, 2.1.11 and 2.2.4 includes a fix for CVE-2019-14235: If passed certain inputs, django.utils.encoding.uri_to_iri could lead to significant memory usage due to a recursion when repercent-encoding invalid UTF-8 octet sequences.",
                                           "is_transitive": false,
@@ -2157,7 +2157,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django before 2.2.24, 3.x before 3.1.12, and 3.2.x before 3.2.4 has a potential directory traversal via django.contrib.admindocs. Staff members could use the TemplateDetailView view to check the existence of arbitrary files. Additionally, if (and only if) the default admindocs templates have been customized by application developers to also show file contents, then not only the existence but also the file contents would have been exposed. In other words, there is directory traversal outside of the template root directories.\r\nhttps://www.djangoproject.com/weblog/2021/jun/02/security-releases",
                                           "is_transitive": false,
@@ -2192,7 +2192,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.24, 3.1.12, and 3.2.4 include a fix for CVE-2021-33571: In Django 2.2 before 2.2.24, 3.x before 3.1.12, and 3.2 before 3.2.4, URLValidator, validate_ipv4_address, and validate_ipv46_address do not prohibit leading zero characters in octal literals. This may allow a bypass of access control that is based on IP addresses. (validate_ipv4_address and validate_ipv46_address are unaffected with Python 3.9.5+).\r\nhttps://www.djangoproject.com/weblog/2021/jun/02/security-releases",
                                           "is_transitive": false,
@@ -2227,7 +2227,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Affected versions of Django are vulnerable to Denial-of-Service via django.utils.text.Truncator. The django.utils.text.Truncator chars() and words() methods (when used with html=True) are subject to a potential DoS (denial of service) attack via certain inputs with very long, potentially malformed HTML text. The chars() and words() methods are used to implement the truncatechars_html and truncatewords_html template filters, which are thus also vulnerable. NOTE: this issue exists because of an incomplete fix for CVE-2019-14232.",
                                           "is_transitive": false,
@@ -2262,7 +2262,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.28, 3.2.13 and 4.0.4 include a fix for CVE-2022-28347: A SQL injection issue was discovered in QuerySet.explain() in Django 2.2 before 2.2.28, 3.2 before 3.2.13, and 4.0 before 4.0.4. This occurs by passing a crafted dictionary (with dictionary expansion) as the **options argument, and placing the injection payload in an option name.\r\nhttps://www.djangoproject.com/weblog/2022/apr/11/security-releases",
                                           "is_transitive": false,
@@ -2297,7 +2297,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.28, 3.2.13 and 4.0.4 include a fix for CVE-2022-28346: An issue was discovered in Django 2.2 before 2.2.28, 3.2 before 3.2.13, and 4.0 before 4.0.4. QuerySet.annotate(), aggregate(), and extra() methods are subject to SQL injection in column aliases via a crafted dictionary (with dictionary expansion) as the passed **kwargs.\r\nhttps://www.djangoproject.com/weblog/2022/apr/11/security-releases",
                                           "is_transitive": false,
@@ -2332,7 +2332,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 3.2.17, 4.0.9 and 4.1.6 includes a fix for CVE-2023-23969: In Django 3.2 before 3.2.17, 4.0 before 4.0.9, and 4.1 before 4.1.6, the parsed values of Accept-Language headers are cached in order to avoid repetitive parsing. This leads to a potential denial-of-service vector via excessive memory usage if the raw value of Accept-Language headers is very large.\r\nhttps://www.djangoproject.com/weblog/2023/feb/01/security-releases",
                                           "is_transitive": false,
@@ -2367,7 +2367,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.16, 2.0.9 and 2.1.1 include a fix for a Race Condition vulnerability that could lead to data loss.\r\nhttps://github.com/django/django/commit/221ef69a9b89262456bb7abe0e5a4b2fda4a0695",
                                           "is_transitive": false,
@@ -2402,7 +2402,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "An issue was discovered in Django 1.11 before 1.11.22, 2.1 before 2.1.10, and 2.2 before 2.2.3. An HTTP request is not redirected to HTTPS when the SECURE_PROXY_SSL_HEADER and SECURE_SSL_REDIRECT settings are used, and the proxy connects to Django via HTTPS. In other words, django.http.HttpRequest.scheme has incorrect behavior when a client uses HTTP.",
                                           "is_transitive": false,
@@ -2437,7 +2437,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.26, 3.2.11 and 4.0.1 include a fix for CVE-2021-45116: An issue was discovered in Django 2.2 before 2.2.26, 3.2 before 3.2.11, and 4.0 before 4.0.1. Due to leveraging the Django Template Language's variable resolution logic, the dictsort template filter was potentially vulnerable to information disclosure, or an unintended method call, if passed a suitably crafted key.\r\nhttps://www.djangoproject.com/weblog/2022/jan/04/security-releases",
                                           "is_transitive": false,
@@ -2472,7 +2472,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.26, 3.2.11 and 4.0.1 include a fix for CVE-2021-45452: Storage.save in Django 2.2 before 2.2.26, 3.2 before 3.2.11, and 4.0 before 4.0.1 allows directory traversal if crafted filenames are directly passed to it.\r\nhttps://www.djangoproject.com/weblog/2022/jan/04/security-releases/",
                                           "is_transitive": false,
@@ -2507,7 +2507,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.26, 3.2.11 and 4.0.1 include a fix for CVE-2021-45115: UserAttributeSimilarityValidator incurred significant overhead in evaluating a submitted password that was artificially large in relation to the comparison values. In a situation where access to user registration was unrestricted, this provided a potential vector for a denial-of-service attack.\r\nhttps://www.djangoproject.com/weblog/2022/jan/04/security-releases/",
                                           "is_transitive": false,
@@ -2542,7 +2542,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.16, 3.0.10 and 3.1.1 include a fix for CVE-2020-24583: An issue was discovered in Django 2.2 before 2.2.16, 3.0 before 3.0.10, and 3.1 before 3.1.1 (when Python 3.7+ is used). FILE_UPLOAD_DIRECTORY_PERMISSIONS mode was not applied to intermediate-level directories created in the process of uploading files. It was also not applied to intermediate-level collected static directories when using the collectstatic management command.\r\n#NOTE: This vulnerability affects only users of Python versions above 3.7.\r\nhttps://www.djangoproject.com/weblog/2020/sep/01/security-releases",
                                           "is_transitive": false,
@@ -2577,7 +2577,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "An issue was discovered in Django 2.2 before 2.2.16, 3.0 before 3.0.10, and 3.1 before 3.1.1 (when Python 3.7+ is used). The intermediate-level directories of the filesystem cache had the system's standard umask rather than 0o077.",
                                           "is_transitive": false,
@@ -2612,7 +2612,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.28, 2.2.10 and 3.0.3 include a fix for CVE-2020-7471: SQL Injection if untrusted data is used as a StringAgg delimiter (e.g., in Django applications that offer downloads of data as a series of rows with a user-specified column delimiter). By passing a suitably crafted delimiter to a contrib.postgres.aggregates.StringAgg instance, it was possible to break escaping and inject malicious SQL.",
                                           "is_transitive": false,
@@ -2647,7 +2647,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 2.2.21, 3.1.9 and 3.2.1 include a fix for CVE-2021-31542: MultiPartParser, UploadedFile, and FieldFile allowed directory traversal via uploaded files with suitably crafted file names.\r\nhttps://www.djangoproject.com/weblog/2021/may/04/security-releases",
                                           "is_transitive": false,
@@ -2682,7 +2682,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Affected versions of Django are vulnerable to potential Denial of Service via certain inputs with a very large number of Unicode characters in django.utils.encoding.uri_to_iri().",
                                           "is_transitive": false,
@@ -2717,7 +2717,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 1.11.19, 2.0.11 and 2.1.6 include a fix for CVE-2019-6975: Uncontrolled Memory Consumption via a malicious attacker-supplied value to the django.utils.numberformat.format() function.",
                                           "is_transitive": false,
@@ -2752,7 +2752,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 4.2.7, 4.1.13 and 3.2.23 include a fix for CVE-2023-46695: Potential denial of service vulnerability in UsernameField on Windows.\r\nhttps://www.djangoproject.com/weblog/2023/nov/01/security-releases",
                                           "is_transitive": false,
@@ -2786,7 +2786,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django 3.2.15 and 4.0.7 include a fix for CVE-2022-36359: An issue was discovered in the HTTP FileResponse class in Django 3.2 before 3.2.15 and 4.0 before 4.0.7. An application is vulnerable to a reflected file download (RFD) attack that sets the Content-Disposition header of a FileResponse when the filename is derived from user-supplied input.\r\nhttps://www.djangoproject.com/weblog/2022/aug/03/security-releases",
                                           "is_transitive": false,
@@ -2821,7 +2821,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Affected versions of Django are vulnerable to a potential ReDoS (regular expression denial of service) in EmailValidator and URLValidator via a very large number of domain name labels of emails and URLs.",
                                           "is_transitive": false,
@@ -2856,7 +2856,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Django versions 2.2.19, 3.0.13 and 3.1.7 include a fix for CVE-2021-23336: Web cache poisoning via 'django.utils.http.limited_parse_qsl()'. Django contains a copy of 'urllib.parse.parse_qsl' which was added to backport some security fixes. A further security fix has been issued recently such that 'parse_qsl(' no longer allows using ';' as a query parameter separator by default.",
                                           "is_transitive": true,
@@ -2891,7 +2891,7 @@
                                                  "name": "django",
                                                  "specifier": "==1.11.15",
                                                  "url": null,
-                                                 "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                 "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                           },
                                           "advisory": "Affected versions of Django are vulnerable to potential denial-of-service in intcomma template filter when used with very long strings.",
                                           "is_transitive": false,
@@ -2919,7 +2919,7 @@
                                                                "name": "scikit-learn",
                                                                "specifier": "==0.19.0",
                                                                "url": null,
-                                                               "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                               "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                         },
                                                         "more_info_url": "https://data.safetycli.com/p/pypi/scikit-learn/97c/"
                                                  }
@@ -2942,7 +2942,7 @@
                                                                "name": "requests",
                                                                "specifier": "==2.19.1",
                                                                "url": null,
-                                                               "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                               "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                         },
                                                         "more_info_url": "https://data.safetycli.com/p/pypi/requests/97c/"
                                                  }
@@ -2965,7 +2965,7 @@
                                                                "name": "numpy",
                                                                "specifier": "==1.16.0",
                                                                "url": null,
-                                                               "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                               "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                         },
                                                         "more_info_url": "https://data.safetycli.com/p/pypi/numpy/97c/"
                                                  }
@@ -2988,7 +2988,7 @@
                                                                "name": "flask",
                                                                "specifier": "==0.12.2",
                                                                "url": null,
-                                                               "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                               "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                         },
                                                         "more_info_url": "https://data.safetycli.com/p/pypi/flask/97c/"
                                                  }
@@ -3011,7 +3011,7 @@
                                                                "name": "django",
                                                                "specifier": "==1.11.15",
                                                                "url": null,
-                                                               "found": "/Users/david/Desktop/notebook_scanner/note_b/classification_notebook_requirements.txt"
+                                                               "found": "/Users/david/Desktop/notebook_scanner/test_notebooks/classification_notebook_requirements.txt"
                                                         },
                                                         "more_info_url": "https://data.safetycli.com/p/pypi/django/97c/"
                                                  }
@@ -3031,7 +3031,7 @@
                      }
               }
        ],
-       "/Users/david/Desktop/notebook_scanner/note_b/tpu_training-tf.ipynb": [
+       "/Users/david/Desktop/notebook_scanner/test_notebooks/tpu_training-tf.ipynb": [
               {
                      "tool": "Detect-Secret",
                      "output_log": {
@@ -3144,7 +3144,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-07-29T06:22:00Z"
+                            "generated_at": "2024-07-29T07:52:29Z"
                      }
               },
               {
@@ -3160,7 +3160,7 @@
                      "output_log": ""
               }
        ],
-       "/Users/david/Desktop/notebook_scanner/note_b/text_classification_quantization_ort.ipynb": [
+       "/Users/david/Desktop/notebook_scanner/test_notebooks/text_classification_quantization_ort.ipynb": [
               {
                      "tool": "Detect-Secret",
                      "output_log": {
@@ -3273,7 +3273,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-07-29T06:22:04Z"
+                            "generated_at": "2024-07-29T07:52:35Z"
                      }
               },
               {

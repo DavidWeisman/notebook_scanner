@@ -79,7 +79,14 @@ func readJSON(filename string) (*Root, error) {
 }
 
 func main() {
-    jsonData, err := readJSON("nbdefense0728-1530.json")
+    if len(os.Args) != 2 {
+                fmt.Println("Usage: go run main.go <github_url> <path_in_repo>")
+                return
+    }
+
+    pathJsonFile := os.Args[1]
+    
+    jsonData, err := readJSON(pathJsonFile)
     if err != nil {
         log.Fatalf("Error reading JSON file: %v", err)
     }
