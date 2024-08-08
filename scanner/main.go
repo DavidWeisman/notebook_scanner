@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"io"
 	"log"
+
+	"notebook_scaner/comper_scanners"
 	"os"
 	"os/exec"
 	"os/user"
@@ -35,7 +37,7 @@ func main() {
 
 	desktopPath, err := getDesktopPath()
 	if err != nil {
-		log.Fatalf("Failed to get desktop path: %v", err)
+		log.Printf("Failed to get desktop path: %v", err)
 	}
 
 	repoName := getRepoName(githubURL)
@@ -43,41 +45,44 @@ func main() {
 	tempDir := filepath.Join(os.TempDir(), repoName)
 
 	if err := os.Mkdir(destDir, 0755); err != nil {
-		log.Fatalf("Failed to create directory on desktop: %v", err)
+		log.Printf("Failed to create directory on desktop: %v", err)
 	}
 
 	if err := cloneRepo(githubURL, tempDir); err != nil {
-		log.Fatalf("Failed to clone the repository: %v", err)
+		log.Printf("Failed to clone the repository: %v", err)
 	}
 	defer os.RemoveAll(tempDir)
 
 	srcPath := filepath.Join(tempDir, pathInRepo)
 	destPath := filepath.Join(destDir, filepath.Base(pathInRepo))
 	if err := copy.Copy(srcPath, destPath); err != nil {
-		log.Fatalf("Failed to copy folder or file: %v", err)
+		log.Printf("Failed to copy folder or file: %v", err)
 	}
 
 	fmt.Println("Download complete! File copied to desktop directory.")
 
 	if err := runNbDefense(destPath); err != nil {
-		log.Fatalf("Failed to run nbdefense: %v", err)
+		log.Printf("Failed to run nbdefense: %v", err)
 	}
 	fmt.Println("nbdefense scan complete!")
 
 	if err := runWatchtower(destPath); err != nil {
-		log.Fatalf("Failed to run watchtower: %v", err)
+		log.Printf("Failed to run watchtower: %v", err)
 	}
 	fmt.Println("watchtower scan complete!")
 
 	if err := moveHTMLFiles(scannerSrcDir, scannerDstDir); err != nil {
-		log.Fatalf("Failed to move HTML files: %v", err)
+		log.Printf("Failed to move HTML files: %v", err)
 	}
 	fmt.Println("Successfully moved nbdefense report.")
 
 	if err := moveDirectories(watchtowerSrcDir, watchtowerDstDir); err != nil {
-		log.Fatalf("Failed to move directories: %v", err)
+		log.Printf("Failed to move directories: %v", err)
 	}
 	fmt.Println("Successfully moved watchtower report.")
+
+	comper_scanners.Comper()
+
 }
 
 func getDesktopPath() (string, error) {
@@ -178,6 +183,7 @@ func moveDirectories(srcDir, destDir string) error {
 	}
 
 	for _, entry := range entries {
+
 		if entry.IsDir() {
 			srcPath := filepath.Join(srcDir, entry.Name())
 			destPath := filepath.Join(destDir, entry.Name())
