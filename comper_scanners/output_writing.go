@@ -126,13 +126,13 @@ func WriteFileOutputs(writer *tabwriter.Writer, fileOutputs FileOutputs) {
 	fmt.Fprintln(writer, "File name\tCode\tSeverity\tDescription\tSummary Field")
 	fmt.Fprintln(writer, "----------\t----\t--------\t-----------\t-------------")
 
-	for _, toolOutputs := range fileOutputs {
+	for fileName, toolOutputs := range fileOutputs {
 		for _, toolOutput := range toolOutputs {
 			switch toolOutput.Tool {
 			case detectSecretTool:
 				WriteDetectSecretOutput(writer, toolOutput.OutputLog)
 			case presidioAnalyzer:
-				WritePresidioAnalyzerOutput(writer, toolOutput.OutputLog)
+				WritePresidioAnalyzerOutput(writer, toolOutput.OutputLog, fileName)
 			}
 		}
 	}
@@ -156,7 +156,7 @@ func WriteDetectSecretOutput(writer *tabwriter.Writer, outputLog interface{}) {
 	}
 }
 
-func WritePresidioAnalyzerOutput(writer *tabwriter.Writer, outputLog interface{}) {
+func WritePresidioAnalyzerOutput(writer *tabwriter.Writer, outputLog interface{}, fileName string) {
 	if outputLogStr, ok := outputLog.(string); ok {
 		lines := strings.Split(outputLogStr, "\n")
 		for _, line := range lines {
@@ -187,7 +187,7 @@ func WritePresidioAnalyzerOutput(writer *tabwriter.Writer, outputLog interface{}
 				}
 			}
 			fmt.Fprintf(writer, "%s\t%s\t%s\t%s\t%s\n",
-				"filename_placeholder",
+				filepath.Base(fileName),
 				presidioAnalyzer,
 				presidioResult.VulnerabilitySeverity,
 				"null",
