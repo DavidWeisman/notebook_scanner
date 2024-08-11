@@ -131,7 +131,7 @@
                                           }
                                    ]
                             },
-                            "generated_at": "2024-08-08T06:58:06Z"
+                            "generated_at": "2024-08-11T07:20:49Z"
                      }
               },
               {
@@ -260,7 +260,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-08-08T06:58:12Z"
+                            "generated_at": "2024-08-11T07:20:58Z"
                      }
               },
               {
@@ -298,7 +298,7 @@
                                    "account": "davidweisman22@gmail.com",
                                    "local_database_path": null,
                                    "safety_version": "3.0.1",
-                                   "timestamp": "2024-08-08 09:58:22",
+                                   "timestamp": "2024-08-11 10:21:08",
                                    "packages_found": 5,
                                    "vulnerabilities_found": 59,
                                    "vulnerabilities_ignored": 0,
@@ -5588,7 +5588,7 @@
                                           },
                                           "advisory": "Django has a potential denial-of-service vulnerability in django.utils.html.urlize() and AdminURLFieldWidget. The urlize and urlizetrunc functions, along with AdminURLFieldWidget, are vulnerable to denial-of-service attacks when handling inputs with a very large number of Unicode characters.",
                                           "is_transitive": false,
-                                          "published_date": "2024-Aug-06",
+                                          "published_date": "2024-Aug-07",
                                           "fixed_versions": [
                                                  "4.2.15",
                                                  "5.0.8"
@@ -6001,7 +6001,7 @@
                                           },
                                           "advisory": "Django has a potential SQL injection vulnerability in the QuerySet.values() and QuerySet.values_list() methods. When used on models with a JSONField, these methods are susceptible to SQL injection through column aliases if a crafted JSON object key is passed as an argument.",
                                           "is_transitive": false,
-                                          "published_date": "2024-Aug-06",
+                                          "published_date": "2024-Aug-07",
                                           "fixed_versions": [
                                                  "4.2.15",
                                                  "5.0.8"
@@ -6414,7 +6414,7 @@
                                           },
                                           "advisory": "Django has a potential denial-of-service vulnerability in django.utils.html.urlize(). The urlize and urlizetrunc functions are susceptible to a possible attack through huge inputs containing a specific sequence of characters.",
                                           "is_transitive": false,
-                                          "published_date": "2024-Aug-06",
+                                          "published_date": "2024-Aug-07",
                                           "fixed_versions": [
                                                  "4.2.15",
                                                  "5.0.8"
@@ -6826,7 +6826,7 @@
                                           },
                                           "advisory": "Django addresses a memory exhaustion issue in django.utils.numberformat.floatformat(). When floatformat receives a string representation of a number in scientific notation with a large exponent, it could lead to excessive memory consumption. To prevent this, decimals with more than 200 digits are now returned as-is.",
                                           "is_transitive": false,
-                                          "published_date": "2024-Aug-06",
+                                          "published_date": "2024-Aug-07",
                                           "fixed_versions": [
                                                  "4.2.15",
                                                  "5.0.8"
@@ -17886,7 +17886,7 @@
                                    }
                             ],
                             "results": {},
-                            "generated_at": "2024-08-08T06:58:24Z"
+                            "generated_at": "2024-08-11T07:21:10Z"
                      }
               },
               {
