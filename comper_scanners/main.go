@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/fs"
 	"log"
+	"os"
 	"path/filepath"
 	"strings"
 	"time"
@@ -89,14 +90,16 @@ func Comper() {
 		fmt.Printf("Error writing table to file %s: %v\n", outputFile1, err)
 	}
 
-	// to_delete_files := []string{outputFile1Name, outputFile2Name, outputFile3Name, outputFile4Name}
-	//
-	//	if err := DeleteFiles(to_delete_files); err != nil {
-	//		fmt.Println(err)
-	//	}
+	diff()
+
+	to_delete_files := []string{outputFile1Name, outputFile2Name, outputFile3Name, outputFile4Name}
+
+	if err := DeleteFiles(to_delete_files); err != nil {
+		fmt.Println(err)
+	}
+
 }
 
-/*
 func DeleteFiles(files []string) error {
 	for _, file := range files {
 		err := os.Remove(file)
@@ -106,7 +109,6 @@ func DeleteFiles(files []string) error {
 	}
 	return nil
 }
-*/
 
 func Find_nb_file(root string) (string, error) {
 	var newestFile string
