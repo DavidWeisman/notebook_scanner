@@ -1,1 +1,1 @@
-{"django1.11.15": ["BSD License"], "flask0.12.2": ["BSD License"], "numpy1.16.0": ["BSD"], "requests2.19.1": ["Apache Software License"], "scikit-learn0.19.0": ["new BSD"]}
+{"django1.11.15": ["BSD License"], "flask0.12.2": ["BSD License"], "numpy1.16.0": ["BSD"], "requests2.19.1": ["Apache Software License"], "scikit-learn0.19.0": ["new BSD"], "pandas0.24.1": ["BSD"], "tensorflow1.15.5": ["Apache Software License"], "urllib31.24.1": ["MIT License"]}

@@ -68,6 +68,9 @@ func WriteSafetyOutput(writer *tabwriter.Writer, data JSONStructure) {
 	fmt.Fprintln(writer, "Severity\tVulnerability ID\tPkg Name\tInstalled Version\tFixed Version")
 	fmt.Fprintln(writer, "---------\t----------------\t--------\t----------------\t-------------")
 
+	// Create a map to track printed lines
+	printedLines := make(map[string]bool)
+
 	for _, tools := range data {
 		for _, tool := range tools {
 			if tool.Tool == safetyTool {
@@ -78,13 +81,19 @@ func WriteSafetyOutput(writer *tabwriter.Writer, data JSONStructure) {
 
 				for _, vuln := range outputLog.Vulnerabilities {
 					fixedVersions := strings.Join(vuln.FixedVersions, ", ")
-					fmt.Fprintf(writer, "%s\t%s\t%s\t%s\t%s\n",
+					line := fmt.Sprintf("%s\t%s\t%s\t%s\t%s\n",
 						vuln.Severity.Cvssv3.BaseSeverity,
 						vuln.CVE,
 						vuln.PackageName,
 						vuln.AnalyzedVersion,
 						fixedVersions,
 					)
+
+					// Check if the line has been printed before
+					if !printedLines[line] {
+						fmt.Fprint(writer, line)
+						printedLines[line] = true
+					}
 				}
 			}
 		}

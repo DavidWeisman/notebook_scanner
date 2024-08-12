@@ -36,7 +36,6 @@ func WriteTableToFile(filePath, name1 string, data1 []string, name2 string, data
 
 	writer := bufio.NewWriter(file)
 
-	// Calculate the maximum width of the columns
 	maxWidth := 0
 	for _, line := range data1 {
 		if len(line) > maxWidth {
@@ -48,13 +47,11 @@ func WriteTableToFile(filePath, name1 string, data1 []string, name2 string, data
 			maxWidth = len(line)
 		}
 	}
-	maxWidth += 4 // Add some padding
+	maxWidth += 4
 
-	// Write headers
 	fmt.Fprintf(writer, "%-*s | %-*s\n", maxWidth, name1, maxWidth, name2)
 	writer.WriteString(strings.Repeat("-", maxWidth*2+3) + "\n")
 
-	// Write rows
 	maxLines := len(data1)
 	if len(data2) > maxLines {
 		maxLines = len(data2)
@@ -85,13 +82,11 @@ func WriteTableToFile(filePath, name1 string, data1 []string, name2 string, data
 			maxWidth = len(line)
 		}
 	}
-	maxWidth += 4 // Add some padding
+	maxWidth += 4
 
-	// Write headers
 	fmt.Fprintf(writer, "%-*s | %-*s\n", maxWidth, name1, maxWidth, name2)
 	writer.WriteString(strings.Repeat("-", maxWidth*2+3) + "\n")
 
-	// Write rows
 	maxLines = len(data3)
 	if len(data2) > maxLines {
 		maxLines = len(data4)
