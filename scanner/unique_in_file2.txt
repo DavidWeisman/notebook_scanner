@@ -1,4 +1,8 @@
 Severity   Vulnerability ID  Pkg Name      Installed Version  Fixed Version
+HIGH       CVE-2021-33503    urllib3       1.24.1             1.26.5
+           CVE-2024-37891    urllib3       1.24.1             1.26.19, 2.2.2
+LOW        CVE-2023-38546    tensorflow    1.15.5             2.14.1
+CRITICAL   CVE-2023-38545    tensorflow    1.15.5             2.14.1
                              tensorflow    1.15.5             2.8.4, 2.10.1, 2.9.3
 MEDIUM     CVE-2022-27774    tensorflow    1.15.5             2.6.4, 2.7.2, 2.8.1, 2.9.0
 MEDIUM                       tensorflow    1.15.5             2.6.4, 2.7.2, 2.8.1, 2.9.0
@@ -28,8 +32,6 @@ MEDIUM     CVE-2021-22922    tensorflow    1.15.5             2.4.4, 2.5.2, 2.6.
            CVE-2024-5206     scikit-learn  0.19.0             1.5.0
 HIGH       CVE-2020-28975    scikit-learn  0.19.0             1.1.0
 LOW                          scikit-learn  0.19.0             0.24.2
-HIGH       CVE-2021-33503    urllib3       1.24.1             1.26.5
-           CVE-2024-37891    urllib3       1.24.1             1.26.19, 2.2.2
            CVE-2024-35195    requests      2.19.1             2.32.2
 HIGH       CVE-2021-31542    django        1.11.15            3.2.1, 2.2.21, 3.1.9
 MEDIUM     CVE-2022-22818    django        1.11.15            2.2.27, 3.2.12, 4.0.2

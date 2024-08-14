@@ -68,7 +68,6 @@ func WriteSafetyOutput(writer *tabwriter.Writer, data JSONStructure) {
 	fmt.Fprintln(writer, "Severity\tVulnerability ID\tPkg Name\tInstalled Version\tFixed Version")
 	fmt.Fprintln(writer, "---------\t----------------\t--------\t----------------\t-------------")
 
-	// Create a map to track printed lines
 	printedLines := make(map[string]bool)
 
 	for _, tools := range data {
@@ -89,7 +88,6 @@ func WriteSafetyOutput(writer *tabwriter.Writer, data JSONStructure) {
 						fixedVersions,
 					)
 
-					// Check if the line has been printed before
 					if !printedLines[line] {
 						fmt.Fprint(writer, line)
 						printedLines[line] = true
