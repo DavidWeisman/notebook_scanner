@@ -33,7 +33,7 @@ func main() {
 
 	scannerDstDir := filepath.Join(begginingPath, "notebook_scaner/scand_reports/nbdefense")
 
-	watchtowerSrcDir := filepath.Join(begginingPath, "notebook_scaner/watchtower_copy/src/scanned_reports")
+	watchtowerSrcDir := filepath.Join(begginingPath, "notebook_scaner/watchtower/src/scanned_reports")
 	watchtowerDstDir := filepath.Join(begginingPath, "notebook_scaner/scand_reports/watchtower")
 
 	githubURL := os.Args[1]
@@ -125,8 +125,8 @@ func runWatchtower(dir string) error {
 		fmt.Println(err)
 	}
 
-	watchtowerSkrip := filepath.Join(begginingPath, "notebook_scaner/watchtower_copy/src/watchtower.py")
-	watchtowerSkrip2 := filepath.Join(begginingPath, "notebook_scaner/watchtower_copy/src")
+	watchtowerSkrip := filepath.Join(begginingPath, "notebook_scaner/watchtower/src/watchtower.py")
+	watchtowerSkrip2 := filepath.Join(begginingPath, "notebook_scaner/watchtower/src")
 	cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("cd %s && python %s --repo_type=folder --path=%s", watchtowerSkrip2, watchtowerSkrip, dir))
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
