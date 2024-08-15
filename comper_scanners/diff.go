@@ -16,8 +16,8 @@ func diff() {
 		return
 	}
 
-	file1 := filepath.Join(begginingPath, "notebook_scaner/scanner/output1.txt")
-	file2 := filepath.Join(begginingPath, "notebook_scaner/scanner/output2.txt")
+	file1 := filepath.Join(begginingPath, "notebook_scanner/scanner/output1.txt")
+	file2 := filepath.Join(begginingPath, "notebook_scanner/scanner/output2.txt")
 
 	outputFile1 := "unique_in_file1.txt"
 	outputFile2 := "unique_in_file2.txt"

@@ -5,7 +5,7 @@ import (
 	"io"
 	"log"
 
-	"notebook_scaner/comper_scanners"
+	"notebook_scanner/comper_scanners"
 	"os"
 	"os/exec"
 	"os/user"
@@ -29,12 +29,12 @@ func main() {
 		return
 	}
 
-	scannerSrcDir := filepath.Join(begginingPath, "notebook_scaner/scanner")
+	scannerSrcDir := filepath.Join(begginingPath, "notebook_scanner/scanner")
 
-	scannerDstDir := filepath.Join(begginingPath, "notebook_scaner/scand_reports/nbdefense")
+	scannerDstDir := filepath.Join(begginingPath, "notebook_scanner/scand_reports/nbdefense")
 
-	watchtowerSrcDir := filepath.Join(begginingPath, "notebook_scaner/watchtower/src/scanned_reports")
-	watchtowerDstDir := filepath.Join(begginingPath, "notebook_scaner/scand_reports/watchtower")
+	watchtowerSrcDir := filepath.Join(begginingPath, "notebook_scanner/watchtower/src/scanned_reports")
+	watchtowerDstDir := filepath.Join(begginingPath, "notebook_scanner/scand_reports/watchtower")
 
 	githubURL := os.Args[1]
 	pathInRepo := os.Args[2]
@@ -125,8 +125,8 @@ func runWatchtower(dir string) error {
 		fmt.Println(err)
 	}
 
-	watchtowerSkrip := filepath.Join(begginingPath, "notebook_scaner/watchtower/src/watchtower.py")
-	watchtowerSkrip2 := filepath.Join(begginingPath, "notebook_scaner/watchtower/src")
+	watchtowerSkrip := filepath.Join(begginingPath, "notebook_scanner/watchtower/src/watchtower.py")
+	watchtowerSkrip2 := filepath.Join(begginingPath, "notebook_scanner/watchtower/src")
 	cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("cd %s && python %s --repo_type=folder --path=%s", watchtowerSkrip2, watchtowerSkrip, dir))
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr

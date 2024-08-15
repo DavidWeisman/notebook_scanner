@@ -30,9 +30,9 @@ func Comper() {
 		return
 	}
 
-	pathToNbdefense := filepath.Join(begginingPath, "notebook_scaner/scand_reports/nbdefense")
+	pathToNbdefense := filepath.Join(begginingPath, "notebook_scanner/scand_reports/nbdefense")
 
-	pathToWatchtower := filepath.Join(begginingPath, "notebook_scaner/scand_reports/watchtower")
+	pathToWatchtower := filepath.Join(begginingPath, "notebook_scanner/scand_reports/watchtower")
 
 	jsonFileName1, err := Find_nb_file(pathToNbdefense)
 	if err != nil {
@@ -241,14 +241,14 @@ func GetParentDirBeforeNotebookScaner() (string, error) {
 
 	currentPath := cwd
 	for {
-		if filepath.Base(currentPath) == "notebook_scaner" {
+		if filepath.Base(currentPath) == "notebook_scanner" {
 			parentDir := filepath.Dir(currentPath)
 			return parentDir, nil
 		}
 
 		parent := filepath.Dir(currentPath)
 		if parent == currentPath {
-			return "", fmt.Errorf("'notebook_scaner' folder not found in the path")
+			return "", fmt.Errorf("'notebook_scanner' folder not found in the path")
 		}
 		currentPath = parent
 	}
