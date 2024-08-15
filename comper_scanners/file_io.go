@@ -70,7 +70,6 @@ func WriteTableToFile(filePath, name1 string, data1 []string, name2 string, data
 
 	fmt.Fprintf(writer, "\n\n\n")
 
-	// Calculate the maximum width of the columns
 	maxWidth = 0
 	for _, line := range data3 {
 		if len(line) > maxWidth {

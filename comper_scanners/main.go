@@ -24,12 +24,22 @@ const (
 
 func Comper() {
 
-	jsonFileName1, err := Find_nb_file("/Users/david/desktop/notebook_scaner/scand_reports/nbdefense")
+	begginingPath, err := GetParentDirBeforeNotebookScaner()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	pathToNbdefense := filepath.Join(begginingPath, "notebook_scaner/scand_reports/nbdefense")
+
+	pathToWatchtower := filepath.Join(begginingPath, "notebook_scaner/scand_reports/watchtower")
+
+	jsonFileName1, err := Find_nb_file(pathToNbdefense)
 	if err != nil {
 		log.Fatalf("Error finding newest file: %v", err)
 	}
 
-	jsonFileName2 := Find_watch_file("/Users/david/desktop/notebook_scaner/scand_reports/watchtower")
+	jsonFileName2 := Find_watch_file(pathToWatchtower)
 
 	trivyOutput, err := ReadAndUnmarshal[TrivyOutput](jsonFileName1)
 	if err != nil {
@@ -206,7 +216,7 @@ func findFileWithPrefix(dir, prefix string) (string, error) {
 
 		if strings.HasPrefix(d.Name(), prefix) {
 			matchedFile = path
-			return filepath.SkipDir // Stop the walk once we found the file
+			return filepath.SkipDir
 		}
 
 		return nil
@@ -221,4 +231,25 @@ func findFileWithPrefix(dir, prefix string) (string, error) {
 	}
 
 	return matchedFile, nil
+}
+
+func GetParentDirBeforeNotebookScaner() (string, error) {
+	cwd, err := os.Getwd()
+	if err != nil {
+		return "", fmt.Errorf("error getting current working directory: %w", err)
+	}
+
+	currentPath := cwd
+	for {
+		if filepath.Base(currentPath) == "notebook_scaner" {
+			parentDir := filepath.Dir(currentPath)
+			return parentDir, nil
+		}
+
+		parent := filepath.Dir(currentPath)
+		if parent == currentPath {
+			return "", fmt.Errorf("'notebook_scaner' folder not found in the path")
+		}
+		currentPath = parent
+	}
 }

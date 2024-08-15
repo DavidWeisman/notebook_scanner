@@ -4,13 +4,20 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
 func diff() {
 
-	file1 := "/Users/david/desktop/notebook_scaner/scanner/output1.txt"
-	file2 := "/Users/david/desktop/notebook_scaner/scanner/output2.txt"
+	begginingPath, err := GetParentDirBeforeNotebookScaner()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	file1 := filepath.Join(begginingPath, "notebook_scaner/scanner/output1.txt")
+	file2 := filepath.Join(begginingPath, "notebook_scaner/scanner/output2.txt")
 
 	outputFile1 := "unique_in_file1.txt"
 	outputFile2 := "unique_in_file2.txt"

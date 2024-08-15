@@ -17,20 +17,24 @@ import (
 )
 
 const (
-	usage            = "Usage: go run main.go <github_url> <path_in_repo>"
-	nbDefenseCmd     = "nbdefense"
-	watchtowerScript = "/Users/david/desktop/watchtower_copy/src/watchtower.py"
-	scannerSrcDir    = "/Users/david/desktop/notebook_scaner/scanner"
-	scannerDstDir    = "/Users/david/desktop/notebook_scaner/scand_reports/nbdefense"
-	watchtowerSrcDir = "/Users/david/Desktop/watchtower_copy/src/scanned_reports"
-	watchtowerDstDir = "/Users/david/desktop/notebook_scaner/scand_reports/watchtower"
+	usage        = "Usage: go run main.go <github_url> <path_in_repo>"
+	nbDefenseCmd = "nbdefense"
 )
 
 func main() {
-	if len(os.Args) != 3 {
-		fmt.Println(usage)
+
+	begginingPath, err := comper_scanners.GetParentDirBeforeNotebookScaner()
+	if err != nil {
+		fmt.Println(err)
 		return
 	}
+
+	scannerSrcDir := filepath.Join(begginingPath, "notebook_scaner/scanner")
+
+	scannerDstDir := filepath.Join(begginingPath, "notebook_scaner/scand_reports/nbdefense")
+
+	watchtowerSrcDir := filepath.Join(begginingPath, "notebook_scaner/watchtower_copy/src/scanned_reports")
+	watchtowerDstDir := filepath.Join(begginingPath, "notebook_scaner/scand_reports/watchtower")
 
 	githubURL := os.Args[1]
 	pathInRepo := os.Args[2]
@@ -115,7 +119,15 @@ func runNbDefense(dir string) error {
 }
 
 func runWatchtower(dir string) error {
-	cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("cd /Users/david/desktop/watchtower_copy/src && python %s --repo_type=folder --path=%s", watchtowerScript, dir))
+
+	begginingPath, err := comper_scanners.GetParentDirBeforeNotebookScaner()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	watchtowerSkrip := filepath.Join(begginingPath, "notebook_scaner/watchtower_copy/src/watchtower.py")
+	watchtowerSkrip2 := filepath.Join(begginingPath, "notebook_scaner/watchtower_copy/src")
+	cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("cd %s && python %s --repo_type=folder --path=%s", watchtowerSkrip2, watchtowerSkrip, dir))
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()

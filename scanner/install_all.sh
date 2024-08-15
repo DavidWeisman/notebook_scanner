@@ -15,6 +15,14 @@ pip install tensorflow==2.15.0 flask==3.0.2 waitress==3.0.0 jupyterlab==4.1.1 sa
 # Install nbdefense
 pip install nbdefense
 
-# Install Trivy using curl and sh
-curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /Users/david/Desktop/anaconda3/envs/testenv/lib/python3.9/site-packages/nbdefense/ v0.32.1
+# Find the path to the nbdefense module dynamically
+NBDEFENSE_PATH=$(python -c "import os; import nbdefense; print(os.path.dirname(nbdefense.__file__))")
 
+# Check if the NBDEFENSE_PATH was found
+if [ -z "$NBDEFENSE_PATH" ]; then
+  echo "Error: Could not find the nbdefense module."
+  exit 1
+fi
+
+# Run the curl command with the dynamic path
+curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b "$NBDEFENSE_PATH" v0.32.1
