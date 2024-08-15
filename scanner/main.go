@@ -5,7 +5,7 @@ import (
 	"io"
 	"log"
 
-	"notebook_scanner/comper_scanners"
+	"notebook_scaner/comper_scanners"
 	"os"
 	"os/exec"
 	"os/user"
