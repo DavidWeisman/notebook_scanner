@@ -16,7 +16,6 @@ import (
 	"github.com/otiai10/copy"
 )
 
-// test
 const (
 	usage        = "Usage: go run main.go <github_url> <path_in_repo>"
 	nbDefenseCmd = "nbdefense"
@@ -39,6 +38,7 @@ func main() {
 
 	githubURL := os.Args[1]
 	pathInRepo := os.Args[2]
+	fmt.Print("duud")
 
 	desktopPath, err := getDesktopPath()
 	if err != nil {

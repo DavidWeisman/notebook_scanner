@@ -137,7 +137,7 @@ func WriteFileOutputs(writer *tabwriter.Writer, fileOutputs FileOutputs) {
 		for _, toolOutput := range toolOutputs {
 			switch toolOutput.Tool {
 			case detectSecretTool:
-				WriteDetectSecretOutput(writer, toolOutput.OutputLog)
+				WriteDetectSecretOutput(writer, toolOutput.OutputLog, fileName)
 			case presidioAnalyzer:
 				WritePresidioAnalyzerOutput(writer, toolOutput.OutputLog, fileName)
 			}
@@ -145,7 +145,7 @@ func WriteFileOutputs(writer *tabwriter.Writer, fileOutputs FileOutputs) {
 	}
 }
 
-func WriteDetectSecretOutput(writer *tabwriter.Writer, outputLog interface{}) {
+func WriteDetectSecretOutput(writer *tabwriter.Writer, outputLog interface{}, fileName string) {
 	var detectSecretOutputLog DetectSecretOutputLog
 	data, _ := json.Marshal(outputLog)
 	json.Unmarshal(data, &detectSecretOutputLog)
@@ -153,7 +153,7 @@ func WriteDetectSecretOutput(writer *tabwriter.Writer, outputLog interface{}) {
 	for _, results := range detectSecretOutputLog.Results {
 		for _, result := range results {
 			fmt.Fprintf(writer, "%s\t%s\t%s\t%s\t%s\n",
-				filepath.Base(result.Filename),
+				filepath.Base(fileName),
 				detectSecretTool,
 				result.VulnerabilitySeverity,
 				result.Type,
