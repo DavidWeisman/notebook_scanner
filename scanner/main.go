@@ -38,7 +38,6 @@ func main() {
 
 	githubURL := os.Args[1]
 	pathInRepo := os.Args[2]
-	fmt.Print("duud")
 
 	desktopPath, err := getDesktopPath()
 	if err != nil {

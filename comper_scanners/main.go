@@ -17,8 +17,7 @@ const (
 	outputFile4Name = "output4.txt"
 	firsst_name     = "NBdefense"
 	second_name     = "whatchtower"
-	outputFile1     = "final_result1"
-	outputFile2     = "final_result2"
+	outputFile1     = "final_result"
 	usageMessage    = "Usage: go run main.go <path_to_json_file1> <path_to_json_file2>"
 )
 
